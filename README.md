@@ -85,6 +85,7 @@ This script builds the Spring Boot app and starts both the API and PostgreSQL co
 
 ```bash
 chmod +x run.sh
+chmod +x ./mvnw
 ./run.sh
 ```
 
