@@ -60,16 +60,15 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- AWS SNS client -->
 		<dependency>
 			<groupId>software.amazon.awssdk</groupId>
 			<artifactId>sns</artifactId>
+			<version>2.28.22</version>
 		</dependency>
-
-		<!-- AWS Regions API (for the Region class) -->
 		<dependency>
 			<groupId>software.amazon.awssdk</groupId>
 			<artifactId>regions</artifactId>
+			<version>2.28.22</version>
 		</dependency>
 
 	</dependencies>

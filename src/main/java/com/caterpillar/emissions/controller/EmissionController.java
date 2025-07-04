@@ -12,7 +12,6 @@ import java.util.List;
 @RequestMapping("/api/emissions")
 @RequiredArgsConstructor
 public class EmissionController {
-
     private final EmissionService service;
 
     @PostMapping

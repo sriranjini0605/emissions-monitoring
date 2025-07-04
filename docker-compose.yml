@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: emissions-postgres
+    environment:
+      POSTGRES_DB: emissionsdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pillar123
+    ports:
+      - "5432:5432"
+
+  emissions-api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/emissionsdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: pillar123
+      AWS_ACCESS_KEY_ID: YOUR_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: YOUR_SECRET_ACCESS_KEY
+      AWS_REGION: us-east-2
+    depends_on:
+      - postgres

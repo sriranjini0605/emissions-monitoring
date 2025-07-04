@@ -11,7 +11,7 @@ public class SnsConfig {
     @Bean
     public SnsClient snsClient() {
         return SnsClient.builder()
-                .region(Region.US_WEST_2)  // Replace with your AWS region (e.g., US_EAST_1, AP_SOUTH_1)
+                .region(Region.US_EAST_2)
                 .build();
     }
 }
