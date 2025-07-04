@@ -6,6 +6,9 @@ echo "Starting Emissions Monitoring API Setup"
 echo "========================================"
 echo ""
 
+# Step 1: Build the Spring Boot JAR
+echo "Step 1: Building Spring Boot application (skip tests)..."
+./mvnw clean package -DskipTests
 
 if [ $? -ne 0 ]; then
   echo ""
@@ -37,7 +40,7 @@ echo ""
 echo "PostgreSQL is running on: localhost:5432"
 echo "   - Database name: emissionsdb"
 echo "   - Username: postgres"
-echo "   - Password: your_password"
+echo "   - Password: pillar123"
 echo ""
 echo "To stop the containers: Ctrl+C, then run 'docker-compose down'"
 echo ""
